@@ -23,7 +23,7 @@
 
       decoration = {
         rounding = 16;
-        rounding_power = 2.0;
+        rounding_power = 2.5;
 
         blur.enabled = false;
         dim_inactive = true;
