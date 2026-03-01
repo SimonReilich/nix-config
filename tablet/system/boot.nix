@@ -7,10 +7,10 @@
 
 {
   boot.kernelPatches = [
-    {
-      name = "rust-1.91-fix";
-      patch = ./patches/rust-fix.patch;
-    }
+    # {
+    #   name = "rust-1.91-fix";
+    #   patch = ./patches/rust-fix.patch;
+    # }
   ];
 
   # secureboot with lanzaboote
