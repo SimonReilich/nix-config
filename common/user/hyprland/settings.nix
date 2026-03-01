@@ -25,12 +25,7 @@
         rounding = 16;
         rounding_power = 2.0;
 
-        blur = {
-          enabled = true;
-          size = 8;
-          passes = 3;
-          new_optimizations = true;
-        };
+        blur.enabled = false;
         dim_inactive = true;
         dim_strength = 0.2;
 
@@ -56,13 +51,6 @@
         ];
         workspace_wraparound = true;
       };
-
-      layerrule = [
-        "blur on, match:namespace swaync-control-center"
-        "blur on, match:namespace swaync-notification-window"
-        "ignore_alpha 0.5, match:namespace swaync-control-center"
-        "ignore_alpha 0.5, match:namespace swaync-notification-window"
-      ];
     };
   };
 }
