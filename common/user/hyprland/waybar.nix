@@ -19,11 +19,10 @@
           "pulseaudio"
           "bluetooth"
           "network"
-          "battery"
         ];
 
         "clock" = {
-          format = "<span font='Google Sans Flex @wght=600,wdth=100,ROND=100'>{:%H:%M  %a., %d. %b.}</span>";
+          format = "{:%H:%M %a., %d. %b.}";
           tooltip = false;
         };
 
@@ -46,16 +45,14 @@
         };
 
         "pulseaudio" = {
-          format = "󰕾 ";
-          format-muted = "󰝟 ";
+          format = "󰕾 {volume}%";
+          format-muted = "󰸈";
           on-click = "pulsemixer --toggle-mute";
-          on-scroll-up = "pulsemixer --change-volume +1";
-          on-scroll-down = "pulsemixer --change-volume -1";
-          tooltip-format = "{desc} ({volume}%)";
+          tooltip-format = "{desc}";
         };
 
         "bluetooth" = {
-          format = "󰂲 ";
+          format = "󰂲";
           format-connected = "󰂯 {device_alias}";
           format-connected-battery = "󰥉 {device_alias} {device_battery_percentage}%";
           tooltip-format = "{num_connections} connected";
@@ -65,29 +62,46 @@
         };
 
         "network" = {
-          format-wifi = "󰤨 ";
+          format-wifi = "";
           format-ethernet = "󰈀";
           format-linked = "";
-          format-disconnected = "󰌙 ";
-          tooltip-format = "{ifname} via {gwaddr}";
-          tooltip-format-wifi = "{essid} ({signalStrength}%)";
-          tooltip-format-ethernet = "{ifname}";
+          format-disconnected = "󰌙";
+          tooltip-format = "{ifname} via {gwaddr} 󰊗";
+          tooltip-format-wifi = "{essid} ({signalStrength}%) ";
+          tooltip-format-ethernet = "{ifname} ";
           tooltip-format-disconnected = "Disconnected";
         };
 
         "battery" = {
           interval = 60;
-          format = "{icon}";
-          tooltip-format = "{timeTo} ({capacity}%)";
+          format = "{capacity}% {icon}";
           format-icons = {
             default = [
-              " "
-              " "
-              " "
-              " "
-              " "
+              "󰂎"
+              "󰁺"
+              "󰁻"
+              "󰁼"
+              "󰁽"
+              "󰁾"
+              "󰁿"
+              "󰂀"
+              "󰂁"
+              "󰂂"
+              "󰁹"
             ];
-            charging = "󰚥";
+            charging = [
+              "󰢟"
+              "󰢜"
+              "󰂆"
+              "󰂇"
+              "󰂈"
+              "󰢝"
+              "󰂉"
+              "󰢞"
+              "󰂊"
+              "󰂋"
+              "󰂅"
+            ];
           };
         };
       };
@@ -121,10 +135,16 @@
         font-weight: 500;
       }
 
+      window#waybar.top > box,
+      window#waybar.bottom > box {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+
       window#waybar.top {
         background: rgba(0, 0, 0, 0.0);
         color: rgb(193, 198, 213);
-        font-size: 18px;
+        font-size: 14px;
       }
 
       window#waybar.bottom {
@@ -139,11 +159,6 @@
         color: rgb(193, 198, 213);
       }
 
-      #clock {
-        margin-left: 16px;
-        font-size: 14px;
-      }
-
       #tray {
         background-color: rgb(193, 198, 213);
         border-radius: 24px;
@@ -156,19 +171,13 @@
       }
 
       #bluetooth {
-        margin-left: 15px;
+        margin-left: 16px;
         margin-right: 0px;
       }
 
       #network {
-        margin-left: 14px;
-        margin-right: 0px;
-      }
-
-      #battery {
         margin-left: 16px;
-        margin-right: 16px;
-        font-size: 20px;
+        margin-right: 0px;
       }
 
       #taskbar button {
