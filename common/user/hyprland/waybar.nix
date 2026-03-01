@@ -101,19 +101,10 @@
         modules-right = [ "hyprland/window" ];
 
         "wlr/taskbar" = {
-          format = "{app_id}";
-          tooltip-format = "{title} ({app_id})";
+          format = "{icon}";
           on-click = "activate";
           on-click-middle = "minimize";
           icon-size = 36;
-          markup = true;
-          rewrite = {
-            "chromium-browser" =
-              "<span font='Google Sans Flex @wdth=200' size='xx-small'> </span><span font='Google Sans Flex @wdth=10' size='xx-small'> </span>";
-            "code" =
-              "<span font='Google Sans Flex @wdth=200' size='xx-small'> </span><span font='Google Sans Flex @wdth=10' size='xx-small'> </span>";
-            "com.mitchellh.ghostty" = "<span font='Google Sans Flex @wdth=600' size='small'> </span>";
-          };
         };
 
         "hyprland/window" = {
@@ -148,20 +139,6 @@
         color: rgb(193, 198, 213);
       }
 
-      tooltip {
-        padding: 12px;
-        background: transparent;
-      }
-
-      tooltip label {
-        background: rgb(25, 25, 27);
-        border-radius: 32px;
-        color: rgb(193, 198, 213);
-        padding: 16px;
-        box-shadow:
-          0px 2px 2px 0px rgba(0, 0, 0, 0.2);
-      }
-
       #clock {
         margin-left: 16px;
         font-size: 14px;
@@ -185,41 +162,31 @@
 
       #network {
         margin-left: 14px;
-        margin-right: 16px;
+        margin-right: 0px;
       }
 
       #battery {
-        margin-left: 0px;
+        margin-left: 16px;
         margin-right: 16px;
         font-size: 20px;
       }
 
       #taskbar button {
-        color: rgb(193, 198, 214);
-        background: rgb(46, 48, 54);
-        transition: all 0.3s ease;
-        margin: 8px;
-        font-size: 36px;
-        border-radius: 16px;
-        min-width: 30px;
-        padding: 0px 0px 0px 0px;
+        border-radius: 100%;
+        margin: 4px;
+        transition: background 0.3s ease;
       }
 
-      #taskbar button.active,
+      #taskbar button.active {
+        background: rgb(46, 48, 54);
+      }
+
       #taskbar button:hover {
-        border-style: solid;
-        border-width: 3px;
-        border-radius: 19px;
-        margin: 5px;
-        border-color: rgb(193, 198, 214);
+        background: rgb(46, 48, 54);
       }
 
       #taskbar button.urgent {
-        border-style: solid;
-        border-width: 2px;
-        border-radius: 19px;
-        margin: 5px;
-        border-color: rgb(96, 20, 16);
+        background: rgb(96, 20, 16);
       }
 
       #workspaces button {
