@@ -82,7 +82,7 @@ in
         };
 
         "custom/updates" = {
-          interval = 3600;
+          interval = 60;
           format = "{}";
           exec = "${check-updates}";
           on-click = "${update-button}";
