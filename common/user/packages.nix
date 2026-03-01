@@ -36,7 +36,7 @@
 
     # Gaming
     cartridges
-    inputs.pandora-nix.packages.x86_64-linux.default
+    # inputs.pandora-nix.packages.x86_64-linux.default
 
     # Utility
     binary
