@@ -263,8 +263,8 @@ in
       }
 
       window#waybar.top {
-        background: transparent;
-        color: rgb(231, 229, 232);
+        background: rgba(0, 0, 0, 0.0);
+        color: rgb(193, 198, 213);
         font-size: 18px;
       }
 
@@ -288,7 +288,7 @@ in
       tooltip label {
         background: rgb(25, 25, 27);
         border-radius: 32px;
-        color: rgb(231, 229, 232);
+        color: rgb(193, 198, 213);
         padding: 16px;
         box-shadow:
           0px 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -301,7 +301,7 @@ in
 
       #custom-updates {
         background: transparent;
-        color: rgb(231, 229, 232);
+        color: rgb(193, 198, 213);
         margin: 4px;
         margin-left: 32px;
         padding: 0px 14.5px 0px 9.5px;
@@ -342,13 +342,12 @@ in
       }
 
       #custom-taskbar-separator {
-        background: rgb(105, 103, 104);
-        padding: 2px;
+        background: rgba(193, 198, 214, 0.5);
+        padding: 0.5px;
         margin: 16px;
         margin-left: 12px;
         margin-right: 12px;
         border-radius: 16px;
-        font-size: 1px;
       }
 
       #custom-chromium,
@@ -384,7 +383,7 @@ in
 
         padding: 0 5px;
         background: transparent;
-        color: rgba(231, 229, 232, 0.5);
+        color: rgba(193, 198, 213, 0.5);
         border: none;
         box-shadow: none;
         font-size: 12px;
@@ -392,16 +391,16 @@ in
       }
 
       #workspaces button.active {
-        color: rgb(231, 229, 232);
+        color: rgb(193, 198, 213);
         font-size: 16px;
       }
 
       #workspaces button:only-child {
-        color: transparent;
+        color: rgba(193, 198, 213, 0);
       }
 
       #workspaces button:hover {
-        color: rgb(231, 229, 232);
+        color: rgb(193, 198, 213);
       }
 
       #workspaces button.urgent {
