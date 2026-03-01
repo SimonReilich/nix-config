@@ -13,12 +13,24 @@ let
   '';
 
   check-updates = pkgs.writeShellScript "check-updates.sh" ''
-    cd ~/.dotfiles
-    git fetch origin
+    cd ~/.dotfiles || exit 1
+    git fetch origin || exit 1
 
-    LOCAL=$(git rev-parse "main")
-    REMOTE=$(git rev-parse "origin/main")
-    BASE=$(git merge-base "main" "origin/main")
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    if [ -z "$CURRENT_BRANCH" ]; then
+        printf '{"text": "", "tooltip": "Error: Could not determine current branch", "class": "needs-attention"}\n'
+        exit 1
+    fi
+
+    UPSTREAM_REF=$(git rev-parse --abbrev-ref --symbolic-full-name "$\{CURRENT_BRANCH}@{upstream}" 2>/dev/null)
+    if [ -z "$UPSTREAM_REF" ]; then
+        printf '{"text": "", "tooltip": "Error: No upstream branch configured for %s", "class": "needs-attention"}\n' "$CURRENT_BRANCH"
+        exit 1
+    fi
+
+    LOCAL=$(git rev-parse "$CURRENT_BRANCH")
+    REMOTE=$(git rev-parse "$UPSTREAM_REF")
+    BASE=$(git merge-base "$CURRENT_BRANCH" "$UPSTREAM_REF")
 
     if [ "$LOCAL" = "$REMOTE" ]; then
         printf '{"text": "", "tooltip": "Up to date", "class": ""}\n'
@@ -32,15 +44,27 @@ let
   '';
 
   update-button = pkgs.writeShellScript "update-button.sh" ''
-    cd ~/.dotfiles
-    git fetch origin
+    cd ~/.dotfiles || exit 1
+    git fetch origin || exit 1
 
-    LOCAL=$(git rev-parse "main")
-    REMOTE=$(git rev-parse "origin/main")
-    BASE=$(git merge-base "main" "origin/main")
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    if [ -z "$CURRENT_BRANCH" ]; then
+        echo "Error: Could not determine current branch" >&2
+        exit 1
+    fi
+
+    UPSTREAM_REF=$(git rev-parse --abbrev-ref --symbolic-full-name "$\{CURRENT_BRANCH}@{upstream}" 2>/dev/null)
+    if [ -z "$UPSTREAM_REF" ]; then
+        echo "Error: No upstream branch configured for $CURRENT_BRANCH" >&2
+        exit 1
+    fi
+
+    LOCAL=$(git rev-parse "$CURRENT_BRANCH")
+    REMOTE=$(git rev-parse "$UPSTREAM_REF")
+    BASE=$(git merge-base "$CURRENT_BRANCH" "$UPSTREAM_REF")
 
     if [ "$LOCAL" = "$REMOTE" ]; then
-        exit 0
+        return 0
     elif [ "$LOCAL" = "$BASE" ]; then
         pull-update
     elif [ "$REMOTE" = "$BASE" ]; then
