@@ -1,5 +1,6 @@
 {
   imports = [
+    ./cursor.nix
     ./email.nix
     ./neovim.nix
     ./obsidian.nix
