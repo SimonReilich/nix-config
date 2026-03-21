@@ -61,7 +61,7 @@
     };
 
     pandora-nix = {
-      url = "github:simonreilich/pandora-flake";
+      url = "github:simonreilich/pandoralauncher-flake-wrapper";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
