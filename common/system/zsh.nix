@@ -28,7 +28,7 @@
 
       eval "$(fzf --zsh)"
       eval "$(zoxide init --cmd cd zsh)"
-      eval "$(oh-my-posh init zsh --config /home/simonr/.dotfiles/common/user/prompt.toml)"
+      eval "$(oh-my-posh init zsh --config /home/simonr/Documents/Infra/nix-config/common/user/prompt.toml)"
     '';
 
     shellInit = "
@@ -103,8 +103,8 @@ EOF
 
     shellAliases = {
       ls = "ls --color";
-      update = "(cd /home/simonr/.dotfiles && git add * && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
-      pull-update = "(cd /home/simonr/.dotfiles && git add * && git pull && sudo nixos-rebuild switch --flake /home/simonr/.dotfiles && sudo nix-collect-garbage --delete-older-than 7d)";
+      update = "(cd /home/simonr/Documents/Infra/nix-config && git add * && sudo nixos-rebuild switch --flake /home/simonr/Documents/Infra/nix-config && sudo nix-collect-garbage --delete-older-than 7d)";
+      pull-update = "(cd /home/simonr/Documents/Infra/nix-config && git add * && git pull && sudo nixos-rebuild switch --flake /home/simonr/Documents/Infra/nix-config && sudo nix-collect-garbage --delete-older-than 7d)";
       n8n = "zen-beta localhost:5678 & ssh -L 5678:localhost:5678 vps";
     };
 
