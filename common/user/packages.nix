@@ -26,6 +26,7 @@
     blender
     blockbench
     design
+    libresprite
 
     # Development
     nixfmt
