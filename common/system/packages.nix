@@ -8,22 +8,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     ghostty
-
-    # Languages
-    gcc15
-    glibc
-    rustup
-    rust-analyzer
-    jdk17
-    nil
-
-    # Development Tools
-    gnumake
     gh
-
-    # Other
-    texliveFull
-    typst
     fzf
     direnv
     jless
@@ -31,8 +16,6 @@
     wl-clipboard
     libnotify
   ];
-
-  programs.java.enable = true;
 
   programs.steam = {
     enable = true;
