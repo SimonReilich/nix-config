@@ -15,6 +15,9 @@
     bat
     wl-clipboard
     libnotify
+
+    tex-fmt
+    texliveFull
   ];
 
   programs.steam = {
