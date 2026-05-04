@@ -448,11 +448,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777472289,
-        "narHash": "sha256-+wPFr/AJT+BkRDK2SPwINhRzQfPXp71oYXspqwj1ZBI=",
+        "lastModified": 1777906688,
+        "narHash": "sha256-lI027ApvchbZPb+fvi4XmcGTzPi9SdmimlbewyXUrOU=",
         "owner": "simonreilich",
         "repo": "pandoralauncher-flake-wrapper",
-        "rev": "e2a80db29404337da6880ff11a6d4e153be0a160",
+        "rev": "80f6a3178fa35c287bf4c274c4c75a9f0a34aa35",
         "type": "github"
       },
       "original": {
