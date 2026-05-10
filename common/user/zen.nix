@@ -95,30 +95,25 @@
           icon = "🏠";
           position = 1000;
         };
-        "School" = {
-          id = "d8dfa020-6e06-4072-92e2-a2d5298458b7";
-          icon = "📚";
-          position = 2000;
-        };
         "Uni" = {
           id = "45f366af-65c6-4645-bbf1-32f79ed35870";
           icon = "🎓";
-          position = 3000;
+          position = 2000;
         };
         "Social" = {
           id = "c35c5646-1cdb-439b-9c95-c3e603bb1afc";
           icon = "🫂";
-          position = 4000;
+          position = 3000;
         };
         "Dev" = {
           id = "b6cceec2-94b8-4b83-890d-279dba265438";
           icon = "👾";
-          position = 5000;
+          position = 4000;
         };
         "Content" = {
           id = "53e34b08-0c88-4ce0-a84d-d23056884bda";
           icon = "🎥";
-          position = 6000;
+          position = 5000;
         };
       };
     };
