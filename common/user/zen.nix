@@ -33,13 +33,20 @@
       ];
       search = {
         force = true;
-        default = "google";
+        default = "qwant";
         order = [
-          "google"
+          "qwant"
           "nix-packages"
           "nixos-wiki"
         ];
         engines = {
+          qwant = {
+            name = "Qwant";
+            urls = [ { template = "https://www.qwant.com/?q={searchTerms}"; } ];
+            iconMapObj."16" = "https://www.qwant.com/favicon.ico";
+            definedAliases = [ "@q" ];
+          };
+
           nix-packages = {
             name = "Nix Packages";
             urls = [
