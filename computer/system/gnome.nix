@@ -14,9 +14,10 @@
     appindicator
     blur-my-shell
     clipboard-history
-    forge
+    dash2dock-lite
     gsconnect
     quick-settings-audio-panel
     rounded-window-corners-reborn
+    tiling-shell
   ];
 }
