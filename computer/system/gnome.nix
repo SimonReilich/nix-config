@@ -14,7 +14,6 @@
     appindicator
     blur-my-shell
     clipboard-history
-    dash2dock-lite
     gsconnect
     quick-settings-audio-panel
     rounded-window-corners-reborn
