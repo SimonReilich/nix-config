@@ -33,6 +33,7 @@
     nixfmt-tree
     godot
     inputs.popprotosim-neo.packages.x86_64-linux.default
+    inputs.automata-suite.packages.x86_64-linux.default
 
     # Gaming
     cartridges

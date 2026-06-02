@@ -69,6 +69,11 @@
       url = "github:simonreilich/pandoralauncher-flake-wrapper";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    automata-suite = {
+      url = "git+https://codeberg.org/SimonReilich/automata-suite";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

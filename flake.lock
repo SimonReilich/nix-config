@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "automata-suite": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780402596,
+        "narHash": "sha256-hdqFGVv8q1J/o8omeSQkDMKaE6/uHbYJ2+Y587hc0Dw=",
+        "ref": "refs/heads/main",
+        "rev": "acf70ed084cd923a31c45a5e460e1414b9b49caa",
+        "revCount": 18,
+        "type": "git",
+        "url": "https://codeberg.org/SimonReilich/automata-suite"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/SimonReilich/automata-suite"
+      }
+    },
     "autosuggestions": {
       "flake": false,
       "locked": {
@@ -522,6 +542,7 @@
     },
     "root": {
       "inputs": {
+        "automata-suite": "automata-suite",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
