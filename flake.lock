@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780402596,
-        "narHash": "sha256-hdqFGVv8q1J/o8omeSQkDMKaE6/uHbYJ2+Y587hc0Dw=",
+        "lastModified": 1780410384,
+        "narHash": "sha256-Aon3+eTcEJOsVLtkVCYFUJ9F9COyVECUKmvWZ/+RSAU=",
         "ref": "refs/heads/main",
-        "rev": "acf70ed084cd923a31c45a5e460e1414b9b49caa",
-        "revCount": 18,
+        "rev": "794f51c790b8283027d7c2c41d0905faa18dcf13",
+        "revCount": 19,
         "type": "git",
         "url": "https://codeberg.org/SimonReilich/automata-suite"
       },
