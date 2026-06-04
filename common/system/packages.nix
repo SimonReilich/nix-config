@@ -10,5 +10,6 @@
     fzf
     jless
     bat
+    devenv
   ];
 }
