@@ -52,6 +52,7 @@
     gnome-network-displays
     morphosis
     emblem
+    icon-library
 
     # Customization
     adw-gtk3
