@@ -14,7 +14,11 @@
     ./system
     ./style.nix
   ];
-  
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
+
   sops.age.keyFile = "~/.config/sops/age/keys.txt";
 
   users.users.simonr = {
