@@ -3,8 +3,7 @@
   stylix.enable = true;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/google-dark.yaml";
   stylix.polarity = "dark";
-
-  stylix.targets.qt.enable = false;
+  stylix.autoEnable = false;
 
   stylix.fonts = {
     serif = {
