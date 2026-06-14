@@ -28,4 +28,6 @@
 
     code-nautilus
   ];
+
+  stylix.targets.vscode.enable = true;
 }

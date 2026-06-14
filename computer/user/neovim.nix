@@ -166,8 +166,8 @@
           icons = {
             glyphs = {
               folder = {
-                arrow_closed = "";
-                arrow_open = "";
+                arrowClosed = "";
+                arrowOpen = "";
               };
             };
           };
@@ -177,7 +177,6 @@
       # Fuzzy Finder
       telescope = {
         enable = true;
-        extensions.hoogle.enable = true;
       };
 
       # Syntax Highlighting
@@ -296,7 +295,7 @@
       };
 
       # Cargo.toml Dependency Management
-      crates-nvim = {
+      crates = {
         enable = true;
       };
     };
