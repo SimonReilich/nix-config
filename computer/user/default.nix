@@ -6,7 +6,7 @@
     ./obsidian.nix
     ./packages.nix
     ./prompt.nix
-    ./vscode.nix
+    # ./vscode.nix
     ./vscodium.nix
     ./zen.nix
   ];
