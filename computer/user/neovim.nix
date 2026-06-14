@@ -159,15 +159,17 @@
       # File Explorer
       nvim-tree = {
         enable = true;
-        settings.git = {
-          enable = true;
-        };
-        renderer = {
-          icons = {
-            glyphs = {
-              folder = {
-                arrowClosed = "";
-                arrowOpen = "";
+        settings = {
+          git = {
+            enable = true;
+          };
+          renderer = {
+            icons = {
+              glyphs = {
+                folder = {
+                  arrow_closed = "";
+                  arrow_open = "";
+                };
               };
             };
           };
