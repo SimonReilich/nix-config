@@ -7,6 +7,7 @@
     ./packages.nix
     ./prompt.nix
     ./vscode.nix
+    ./vscodium.nix
     ./zen.nix
   ];
 }
