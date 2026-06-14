@@ -1,9 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   stylix.enable = true;
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/google-dark.yaml";
   stylix.polarity = "dark";
-  stylix.autoEnable = false;
+
+  stylix.targets.qt.platform = lib.mkForce "qtct";
 
   stylix.fonts = {
     serif = {

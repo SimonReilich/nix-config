@@ -26,21 +26,33 @@
         vue.volar
       ];
       userSettings = {
-        # Disable AI features
-        "chat.disableAIFeatures" = true;
         "chat.agent.enabled" = false;
-        "chat.commandCenter.enabled" = false;
-        "chat.editor.enableChat" = false;
+        "chat.disableAIFeatures" = true;
+        "chat.editor.fontFamily" = "JetBrainsMono Nerd Font";
+        "chat.editor.fontSize" = 16.0;
+        "chat.fontFamily" = "Lexend";
+        "debug.console.fontFamily" = "JetBrainsMono Nerd Font";
+        "debug.console.fontSize" = 16.0;
+        "editor.fontFamily" = "JetBrainsMono Nerd Font";
+        "editor.fontSize" = 16.0;
+        "editor.inlayHints.fontFamily" = "JetBrainsMono Nerd Font";
         "editor.inlineSuggest.enabled" = false;
-        "terminal.integrated.initialHint" = false;
-        "github.copilot.enable" = { "*" = false; };
-        "github.copilot.editor.enableAutoCompletions" = false;
-
-        # Privacy and experiments
-        "telemetry.telemetryLevel" = "off";
+        "editor.inlineSuggest.fontFamily" = "JetBrainsMono Nerd Font";
+        "editor.minimap.sectionHeaderFontSize" = 10.285714285714286;
+        "markdown.preview.fontFamily" = "Lexend";
+        "markdown.preview.fontSize" = 16.0;
+        "notebook.markup.fontFamily" = "Lexend";
         "redhat.telemetry.enabled" = false;
-        "workbench.enableExperiments" = false;
+        "scm.inputFontFamily" = "JetBrainsMono Nerd Font";
+        "scm.inputFontSize" = 14.857142857142858;
+        "screencastMode.fontSize" = 64.0;
+        "telemetry.telemetryLevel" = "off";
+        "terminal.integrated.fontSize" = 16.0;
+        "terminal.integrated.initialHint" = false;
+        "workbench.colorTheme" = "Stylix";
         "workbench.editor.empty.hint" = "hidden";
+        "workbench.enableExperiments" = false;
+        "git.autofetch" = true;
       };
     };
   };
@@ -48,6 +60,4 @@
   home.packages = with pkgs; [
     code-nautilus
   ];
-
-  stylix.targets.vscodium.enable = true;
 }

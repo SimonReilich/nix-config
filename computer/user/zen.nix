@@ -160,4 +160,6 @@
       };
     };
   };
+
+  stylix.targets.zen-browser.profileNames = [ "simon" ];
 }
