@@ -53,6 +53,7 @@
         "workbench.colorTheme" = "Stylix";
         "workbench.editor.empty.hint" = "hidden";
         "workbench.enableExperiments" = false;
+        "git.confirmSync" = false;
 
         "[nix]" = {
           "editor.defaultFormatter" = "jnoortheen.nix-ide";
