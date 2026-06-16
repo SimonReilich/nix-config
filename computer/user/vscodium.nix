@@ -39,6 +39,7 @@
         "editor.inlineSuggest.enabled" = false;
         "editor.inlineSuggest.fontFamily" = "JetBrainsMono Nerd Font";
         "editor.minimap.sectionHeaderFontSize" = 10.285714285714286;
+        "git.autofetch" = true;
         "markdown.preview.fontFamily" = "Lexend";
         "markdown.preview.fontSize" = 16.0;
         "notebook.markup.fontFamily" = "Lexend";
@@ -52,7 +53,74 @@
         "workbench.colorTheme" = "Stylix";
         "workbench.editor.empty.hint" = "hidden";
         "workbench.enableExperiments" = false;
-        "git.autofetch" = true;
+
+        "[nix]" = {
+          "editor.defaultFormatter" = "jnoortheen.nix-ide";
+        };
+
+        "latex-workshop.format.fixMath.enabled" = true;
+        "latex-workshop.latex.recipes" = [
+          {
+            "name" = "latexmk (lualatex)";
+            "tools" = [
+              "lualatexmk"
+            ];
+          }
+          {
+            "name" = "latexmk";
+            "tools" = [
+              "latexmk"
+            ];
+          }
+          {
+            "name" = "latexmk (latexmkrc)";
+            "tools" = [
+              "latexmk_rconly"
+            ];
+          }
+          {
+            "name" = "latexmk (xelatex)";
+            "tools" = [
+              "xelatexmk"
+            ];
+          }
+          {
+            "name" = "pdflatex -> bibtex -> pdflatex * 2";
+            "tools" = [
+              "pdflatex"
+              "bibtex"
+              "pdflatex"
+              "pdflatex"
+            ];
+          }
+          {
+            "name" = "Compile Rnw files";
+            "tools" = [
+              "rnw2tex"
+              "latexmk"
+            ];
+          }
+          {
+            "name" = "Compile Jnw files";
+            "tools" = [
+              "jnw2tex"
+              "latexmk"
+            ];
+          }
+          {
+            "name" = "Compile Pnw files";
+            "tools" = [
+              "pnw2tex"
+              "latexmk"
+            ];
+          }
+          {
+            "name" = "tectonic";
+            "tools" = [
+              "tectonic"
+            ];
+          }
+        ];
       };
     };
   };
