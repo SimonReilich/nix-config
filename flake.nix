@@ -73,6 +73,8 @@
       url = "git+https://codeberg.org/SimonReilich/automata-suite";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-cavalry.url = "github:hexadecimal233/nix-cavalry";
   };
 
   outputs =

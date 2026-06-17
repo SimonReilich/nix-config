@@ -8,6 +8,7 @@
     switcheroo
     video-trimmer
     rnote
+    inputs.nix-cavalry.packages.x86_64-linux.default
 
     # Info & Entertainment
     spotify
