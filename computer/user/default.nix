@@ -2,7 +2,8 @@
   imports = [
     ./cursor.nix
     ./email.nix
-    ./neovim.nix
+    ./helix.nix
+    # ./neovim.nix
     ./obsidian.nix
     ./packages.nix
     ./prompt.nix

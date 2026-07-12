@@ -4,9 +4,7 @@
   pkgs,
   ...
 }:
-let
 
-in
 {
   accounts.email.accounts = {
     t-online = {

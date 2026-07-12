@@ -23,7 +23,7 @@
     fractal
 
     # Creative
-    musescore
+    # musescore
     blender
     blockbench
     design
