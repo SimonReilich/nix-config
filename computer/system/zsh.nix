@@ -90,7 +90,6 @@
         "colorize"
         "command-not-found"
         "copybuffer"
-        "direnv"
         "gh"
         "git"
         "git-auto-fetch"
@@ -109,16 +108,16 @@
     };
   };
 
-  programs.direnv = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
     flags = [
       "--cmd cd"
     ];
+  };
+
+  environment.sessionVariables = {
+    EDITOR = "hx";
+    VISUAL = "hx";
   };
 }

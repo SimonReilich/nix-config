@@ -9,6 +9,7 @@
     ./printing.nix
     ./sound.nix
     ./packages.nix
+    ./terminal.nix
     ./zsh.nix
   ];
 }
