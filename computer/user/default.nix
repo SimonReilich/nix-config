@@ -1,6 +1,7 @@
 {
   imports = [
     ./cursor.nix
+    ./fastfetch.nix
     ./email.nix
     ./helix.nix
     # ./neovim.nix
