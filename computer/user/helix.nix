@@ -16,13 +16,6 @@
       prettier
       typescript-language-server
       ruff
-      (python3.withPackages (
-        p:
-        (with p; [
-          python-lsp-ruff
-          python-lsp-server
-        ])
-      ))
       rust-analyzer
       tailwindcss-language-server
       taplo
@@ -235,19 +228,6 @@
           name = "nix";
           formatter = {
             command = "nixpkgs-fmt";
-          };
-          auto-format = true;
-        }
-        
-        {
-          name = "python";
-          language-servers = [ "pylsp" ];
-          formatter = {
-            command = "sh";
-            args = [
-              "-c"
-              "ruff check --select I --fix - | ruff format --line-length 88 -"
-            ];
           };
           auto-format = true;
         }
