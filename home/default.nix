@@ -1,0 +1,7 @@
+{
+  imports = [
+    ./customization
+    ./graphical
+    ./terminal
+  ];
+}
