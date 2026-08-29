@@ -55,11 +55,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixvim = {
-    #   url = "github:nix-community/nixvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     thunderbird-gnome-theme = {
       url = "github:rafaelmardojai/thunderbird-gnome-theme";
       flake = false;
@@ -95,13 +90,13 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./desktop/desktop-config.nix
+            ./hosts/desktop/desktop-config.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.simonr = import ./desktop/desktop-home.nix;
+              home-manager.users.simonr = import ./hosts/desktop/desktop-home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
             stylix.nixosModules.stylix
@@ -113,14 +108,14 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./tablet/tablet-config.nix
+            ./hosts/tablet/tablet-config.nix
             nixos-hardware.nixosModules.microsoft-surface-pro-intel
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.simonr = import ./tablet/tablet-home.nix;
+              home-manager.users.simonr = import ./hosts/tablet/tablet-home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
             lanzaboote.nixosModules.lanzaboote
@@ -147,7 +142,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./server/server-config.nix
+            ./hosts/server/server-config.nix
           ];
         };
       };

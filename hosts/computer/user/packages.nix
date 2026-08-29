@@ -1,0 +1,67 @@
+{ inputs, pkgs, ... }:
+
+{
+  home.packages = with pkgs; [
+    # Editors and Viewers
+    apostrophe
+    onlyoffice-desktopeditors
+    switcheroo
+    video-trimmer
+    rnote
+    inputs.nix-cavalry.packages.x86_64-linux.default
+
+    # Info & Entertainment
+    spotify
+    wike
+    zotero
+    nucleus
+
+    # Communication
+    discord
+    signal-desktop
+    zulip
+    fractal
+
+    # Creative
+    # musescore
+    blender
+    blockbench
+    design
+    libresprite
+
+    # Development
+    nixfmt
+    nixfmt-tree
+    godot
+    inputs.popprotosim-neo.packages.x86_64-linux.default
+    inputs.automata-suite.packages.x86_64-linux.default
+
+    # Gaming
+    cartridges
+    inputs.pandora-nix.packages.x86_64-linux.default
+
+    # Utility
+    binary
+    eyedropper
+    gnome-decoder
+    gnome-graphs
+    gnome-solanum
+    hieroglyphic
+    ffmpeg
+    delineate
+    eloquent
+    gnome-network-displays
+    morphosis
+    emblem
+    icon-library
+
+    # Customization
+    adw-gtk3
+    gnome-control-center
+    gnome-tweaks
+
+    # Passwords
+    proton-pass
+    proton-authenticator
+  ];
+}
