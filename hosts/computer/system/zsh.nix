@@ -1,6 +1,9 @@
 { inputs, pkgs, ... }:
 
 {
+  # Prevent the new user dialog in zsh
+  system.userActivationScripts.zshrc = "touch .zshrc";
+  
   programs.zsh = {
     enable = true;
     enableCompletion = true;
