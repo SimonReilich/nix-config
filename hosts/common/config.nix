@@ -11,7 +11,6 @@
 
 {
   imports = [
-    ./system
     inputs.sops-nix.nixosModules.sops
   ];
 

@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./git.nix
+  ];
+  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

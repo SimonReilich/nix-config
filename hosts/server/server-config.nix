@@ -3,6 +3,7 @@
   imports = [
     ./system
     ../common/config.nix
+    ../../nixos
 
     ./server-hardware.nix
   ];

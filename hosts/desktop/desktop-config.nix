@@ -11,6 +11,7 @@
     ../common/config.nix
     ../computer/config.nix
     ./desktop-style.nix
+    ../../nixos
 
     # Include the results of the hardware scan.
     ./desktop-hardware.nix

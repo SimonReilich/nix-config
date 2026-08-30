@@ -6,6 +6,7 @@
     ../common/config.nix
     ../computer/config.nix
     ./tablet-style.nix
+    ../../nixos
 
     # Include the results of the hardware scan.
     ./tablet-hardware.nix
