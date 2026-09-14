@@ -1,0 +1,42 @@
+name: Weekly Image Rotator
+
+on:
+  schedule:
+    - cron: '0 23 * * 6'
+  workflow_dispatch: 
+
+jobs:
+  update-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Pick random image and replace
+        run: |
+          # 1. Configuration: Change these variables to match your setup
+          SOURCE_DIR="./wallpapers"
+          TARGET_FILE="./hosts/desktop/wallpaper.png"
+          
+          # 2. Find all images (jpg, png, jpeg) in the directory and pick one randomly
+          RANDOM_IMAGE=$(find "$SOURCE_DIR" -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.jpeg \) | shuf -n 1)
+          
+          # 3. Check if an image was actually found
+          if [ -z "$RANDOM_IMAGE" ]; then
+            echo "Error: No images found in $SOURCE_DIR"
+            exit 1
+          fi
+          
+          echo "Selected random image: $RANDOM_IMAGE"
+          
+          # 4. Overwrite the target file with the selected image
+          cp "$RANDOM_IMAGE" "$TARGET_FILE"
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: rotate weekly image"
+          file_pattern: "hosts/desktop/wallpaper.png"
