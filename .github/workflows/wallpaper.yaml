@@ -1,4 +1,4 @@
-name: Weekly Image Rotator
+name: weekly image rotator
 
 on:
   schedule:
