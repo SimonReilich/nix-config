@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write 
+      pull-requests: write
 
     steps:
       - name: Checkout repository
@@ -35,8 +36,11 @@ jobs:
           # 4. Overwrite the target file with the selected image
           cp "$RANDOM_IMAGE" "$TARGET_FILE"
 
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
         with:
-          commit_message: "chore: rotate weekly image"
-          file_pattern: "hosts/desktop/wallpaper.png"
+          commit-message: "chore: rotate weekly wallpaper"
+          title: "chore: rotate weekly wallpaper"
+          body: "Automated weekly wallpaper rotation."
+          branch: "rotate-wallpaper"
+          delete-branch: true
