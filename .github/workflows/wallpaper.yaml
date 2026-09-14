@@ -37,10 +37,21 @@ jobs:
           cp "$RANDOM_IMAGE" "$TARGET_FILE"
 
       - name: Create Pull Request
+        id: wallpaper_shuffle
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.GH_PAT }}
           commit-message: "chore: rotate weekly wallpaper"
           title: "chore: rotate weekly wallpaper"
           body: "Automated weekly wallpaper rotation."
           branch: "rotate-wallpaper"
           delete-branch: true
+          labels: |
+            automated
+
+      - name: Enable auto-merge
+        if: steps.wallpaper_shuffle.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          gh pr merge --auto --squash "${{ steps.wallpaper_shuffle.outputs.pull-request-url }}"
