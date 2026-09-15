@@ -20,7 +20,8 @@ jobs:
         run: |
           # 1. Configuration: Change these variables to match your setup
           SOURCE_DIR="./wallpapers"
-          TARGET_FILE="./hosts/desktop/wallpaper.png"
+          TARGET_FILE_DESKTOP="./hosts/desktop/wallpaper.png"
+          TARGET_FILE_TABLET="./hosts/tablet/wallpaper.png"
           
           # 2. Find all images (jpg, png, jpeg) in the directory and pick one randomly
           RANDOM_IMAGE=$(find "$SOURCE_DIR" -type f \( -iname \*.jpg -o -iname \*.png -o -iname \*.jpeg \) | shuf -n 1)
@@ -34,7 +35,8 @@ jobs:
           echo "Selected random image: $RANDOM_IMAGE"
           
           # 4. Overwrite the target file with the selected image
-          cp "$RANDOM_IMAGE" "$TARGET_FILE"
+          cp "$RANDOM_IMAGE" "$TARGET_FILE_DESKTOP"
+          cp "$RANDOM_IMAGE" "$TARGET_FILE_TABLET"
 
       - name: Create Pull Request
         id: wallpaper_shuffle
