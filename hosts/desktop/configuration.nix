@@ -7,12 +7,13 @@
 
 {
   imports = [
-    ./system
     ../computer/config.nix
     ../../nixos
     ../../secrets
     ./hardware.nix
   ];
+
+  networking.hostName = "desktop";
   
   stylix.image = ./wallpaper.png;
 
@@ -27,4 +28,6 @@
   hardware.graphics.enable = true;
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
+
+  programs.coolercontrol.enable = true;
 }

@@ -1,4 +1,4 @@
-{ pkgs, hardware, ... }:
+{ pkgs, hardware, lib, ... }:
 
 {
   imports = [
@@ -8,6 +8,33 @@
     ../../secrets
     ./hardware.nix
   ];
+
+  networking.hostName = "tablet";
+
+  boot.kernelPatches = [
+    # {
+    #   name = "rust-1.91-fix";
+    #   patch = ./patches/rust-fix.patch;
+    # }
+  ];
+
+  environment.systemPackages = with pkgs; [
+    sbctl
+    libwacom-surface
+    linux-firmware
+    mkcert
+  ];
+
+  # Lanzaboote currently replaces the systemd-boot module.
+  # This setting is usually set to true in configuration.nix
+  # generated at installation time. So we force it to false
+  # for now.
+  boot.loader.systemd-boot.enable = lib.mkForce false;
+
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl";
+  };
 
   stylix.image = ./wallpaper.png;
 
@@ -20,4 +47,6 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   hardware.microsoft-surface.kernelVersion = "stable";
+
+  programs.coolercontrol.enable = false;
 }
