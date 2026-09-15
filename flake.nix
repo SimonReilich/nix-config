@@ -87,13 +87,13 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./hosts/desktop/desktop-config.nix
+            ./hosts/desktop/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.simonr = import ./hosts/desktop/desktop-home.nix;
+              home-manager.users.simonr = import ./hosts/desktop/home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
             stylix.nixosModules.stylix
@@ -104,14 +104,14 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./hosts/tablet/tablet-config.nix
+            ./hosts/tablet/configuration.nix
             nixos-hardware.nixosModules.microsoft-surface-pro-intel
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.backupFileExtension = "backup";
-              home-manager.users.simonr = import ./hosts/tablet/tablet-home.nix;
+              home-manager.users.simonr = import ./hosts/tablet/home.nix;
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
             lanzaboote.nixosModules.lanzaboote
@@ -137,7 +137,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ./hosts/server/server-config.nix
+            ./hosts/server/configuration.nix
           ];
         };
       };

@@ -4,13 +4,12 @@
   imports = [
     ./system
     ../computer/config.nix
-    ./tablet-style.nix
     ../../nixos
     ../../secrets
-
-    # Include the results of the hardware scan.
-    ./tablet-hardware.nix
+    ./hardware.nix
   ];
+
+  stylix.image = ./wallpaper.png;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
