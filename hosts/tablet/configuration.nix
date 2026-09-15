@@ -49,4 +49,9 @@
   hardware.microsoft-surface.kernelVersion = "stable";
 
   programs.coolercontrol.enable = false;
+  
+  services = {
+    forgejo-runner.enable = false;
+    update.enable = false;
+  };
 }

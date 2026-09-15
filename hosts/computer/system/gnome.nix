@@ -19,4 +19,35 @@
     rounded-window-corners-reborn
     tiling-shell
   ];
+
+  # Open ports in the firewall.
+  networking.firewall = {
+    enable = true;
+    # TCP and UDP Ports for GSConnect
+    allowedTCPPortRanges = [
+      {
+        from = 1714;
+        to = 1764;
+      }
+    ];
+    allowedUDPPortRanges = [
+      {
+        from = 1714;
+        to = 1764;
+      }
+    ];
+  };
+
+  # Disable preinstalled software
+  environment.gnome.excludePackages = with pkgs; [
+    epiphany
+    simple-scan
+    seahorse
+    snapshot
+
+    gnome-music
+    gnome-maps
+    gnome-tour
+    gnome-weather
+  ];
 }

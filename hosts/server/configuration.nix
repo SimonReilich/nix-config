@@ -1,7 +1,6 @@
 { pkgs, modulesPath, ... }:
 {
   imports = [
-    ./system
     ../../nixos
     ../../secrets
     ./hardware.nix
@@ -25,4 +24,9 @@
   ];
 
   programs.coolercontrol.enable = false;
+  
+  services = {
+    forgejo-runner.enable = true;
+    update.enable = true;
+  };
 }

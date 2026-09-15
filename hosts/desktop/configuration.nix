@@ -30,4 +30,9 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
 
   programs.coolercontrol.enable = true;
+  
+  services = {
+    forgejo-runner.enable = false;
+    update.enable = false;
+  };
 }
