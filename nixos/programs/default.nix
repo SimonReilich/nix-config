@@ -2,7 +2,9 @@
 
 {
   imports = [
+    ./coolercontrol.nix
     ./git.nix
+    ./steam.nix
   ];
   
   # Allow unfree packages

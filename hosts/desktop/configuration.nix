@@ -7,15 +7,13 @@
 
 {
   imports = [
-    ../computer/config.nix
     ../../nixos
     ../../secrets
     ./hardware.nix
   ];
 
   networking.hostName = "desktop";
-  
-  stylix.image = ./wallpaper.png;
+  networking.networkmanager.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -29,7 +27,26 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  programs.coolercontrol.enable = true;
+  sops.age.keyFile = "~/.config/sops/age/keys.txt";
+
+  users.users.simonr = {
+    isNormalUser = true;
+    home = "/home/simonr";
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "audio"
+    ];
+    shell = pkgs.zsh;
+  };
+
+  programs.cooling.enable = true;
+
+  system = {
+    headless = false;
+    gnome = true;
+    has_touchscreen = true;
+  };
   
   services = {
     forgejo-runner.enable = false;

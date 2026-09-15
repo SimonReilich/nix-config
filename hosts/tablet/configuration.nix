@@ -2,14 +2,13 @@
 
 {
   imports = [
-    ./system
-    ../computer/config.nix
     ../../nixos
     ../../secrets
     ./hardware.nix
   ];
 
   networking.hostName = "tablet";
+  networking.networkmanager.enable = true;
 
   boot.kernelPatches = [
     # {
@@ -36,8 +35,6 @@
     pkiBundle = "/var/lib/sbctl";
   };
 
-  stylix.image = ./wallpaper.png;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -48,8 +45,27 @@
 
   hardware.microsoft-surface.kernelVersion = "stable";
 
-  programs.coolercontrol.enable = false;
-  
+  sops.age.keyFile = "~/.config/sops/age/keys.txt";
+
+  users.users.simonr = {
+    isNormalUser = true;
+    home = "/home/simonr";
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "audio"
+    ];
+    shell = pkgs.zsh;
+  };
+
+  programs.cooling.enable = false;
+
+  system = {
+    headless = false;
+    gnome = true;
+    has_touchscreen = true;
+  };
+
   services = {
     forgejo-runner.enable = false;
     update.enable = false;

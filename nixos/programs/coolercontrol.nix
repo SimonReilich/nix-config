@@ -14,14 +14,14 @@ let
     types
     ;
 
-  cfg = config.programs.coolercontrol;
+  cfg = config.programs.cooling;
 in
 {
-  options.programs.coolercontrol = {
+  options.programs.cooling = {
     enable = mkEnableOption "Coolercontrol configuration";
   };
 
-  config = mkIf cfg.enable (mkMerge [
+  config = mkIf (!config.system.headless && cfg.enable) (mkMerge [
     {
       environment.systemPackages = with pkgs; [
         coolercontrol.coolercontrold

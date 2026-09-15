@@ -23,8 +23,13 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF/9Vh3mp1SoF9xzbR8BrLaSZEjx26envKfvbLYU/OO9 simon.reilich137@gmail.com"
   ];
 
-  programs.coolercontrol.enable = false;
-  
+  programs.cooling.enable = false;
+
+  system = {
+    headless = true;
+    gnome = false;
+  };
+
   services = {
     forgejo-runner.enable = true;
     update.enable = true;

@@ -138,6 +138,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/server/configuration.nix
+            stylix.nixosModules.stylix
           ];
         };
       };
