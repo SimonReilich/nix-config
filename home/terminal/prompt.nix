@@ -12,7 +12,7 @@
     settings = {
 
     };
-    configFile = /home/simonr/Documents/Infra/nix-config/hosts/computer/user/prompt.toml;
+    configFile = /home/simonr/Documents/Infra/nix-config/home/terminal/prompt.toml;
     enableZshIntegration = true;
   };
 }

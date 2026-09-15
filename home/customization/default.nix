@@ -1,5 +1,5 @@
 {
   imports = [
-    
+    ./cursor.nix
   ];
 }
