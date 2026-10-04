@@ -20,7 +20,7 @@
     # Info & Entertainment
     spotify
     wike
-    zotero
+    # zotero
     nucleus
 
     # Communication
