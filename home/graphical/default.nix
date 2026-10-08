@@ -22,6 +22,7 @@
     wike
     # zotero
     nucleus
+    mathematica
 
     # Communication
     discord
