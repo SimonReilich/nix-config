@@ -69,6 +69,11 @@
     };
 
     nix-cavalry.url = "github:hexadecimal233/nix-cavalry";
+
+    newsreader-font = {
+      url = "github:productiontype/Newsreader";
+      flake = false;
+    };
   };
 
   outputs =

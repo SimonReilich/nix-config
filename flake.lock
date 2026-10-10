@@ -304,6 +304,22 @@
         "type": "github"
       }
     },
+    "newsreader-font": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1614594131,
+        "narHash": "sha256-5F0ledn6NwrgRxHIILFzU6jm3JvXg9P2rO0M45gOPBQ=",
+        "owner": "productiontype",
+        "repo": "Newsreader",
+        "rev": "cfcb4f7af0e52c25e8df2a2431814c8e5fe2e155",
+        "type": "github"
+      },
+      "original": {
+        "owner": "productiontype",
+        "repo": "Newsreader",
+        "type": "github"
+      }
+    },
     "nix-cavalry": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -499,6 +515,7 @@
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
+        "newsreader-font": "newsreader-font",
         "nix-cavalry": "nix-cavalry",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",

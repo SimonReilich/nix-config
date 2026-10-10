@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 
@@ -27,8 +28,19 @@ in
 
       stylix.fonts = {
         serif = {
-          package = pkgs.lexend;
-          name = "Lexend";
+          name = "Newsreader";
+          package = pkgs.stdenvNoCC.mkDerivation {
+            pname = "newsreader";
+            version = "1.0";
+            src = inputs.newsreader-font;
+
+            installPhase = ''
+              runHook preInstall
+              install -Dm644 fonts/static/ttf/*.ttf -t $out/share/fonts/truetype/newsreader/
+              install -Dm644 fonts/variable/ttf/*.ttf -t $out/share/fonts/truetype/newsreader/
+              runHook postInstall
+            '';
+          };
         };
 
         sansSerif = {
