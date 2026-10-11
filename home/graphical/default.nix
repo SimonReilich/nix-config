@@ -10,7 +10,6 @@
 
   home.packages = with pkgs; [
     # Editors and Viewers
-    apostrophe
     onlyoffice-desktopeditors
     switcheroo
     video-trimmer
