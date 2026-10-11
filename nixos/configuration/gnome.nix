@@ -55,6 +55,7 @@ in
         simple-scan
         seahorse
         snapshot
+        papers
 
         gnome-music
         gnome-maps
