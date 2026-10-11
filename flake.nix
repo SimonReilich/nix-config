@@ -29,7 +29,7 @@
     };
 
     firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      url = "git+https://gitlab.com/rycee/nur-expressions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
