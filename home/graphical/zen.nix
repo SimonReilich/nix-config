@@ -126,7 +126,6 @@
     };
     policies = {
       # Feature Disabling
-      DisableBuiltinPDFViewer = true;
       DisableFirefoxStudies = true;
       DisableFirefoxScreenshots = true;
       DisableForgetButton = true;
