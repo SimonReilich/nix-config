@@ -18,8 +18,7 @@
         myriad-dreamin.tinymist
         ocamllabs.ocaml-platform
         piousdeer.adwaita-theme
-        reditorsupport.r
-        reditorsupport.r-syntax
+        quarto.quarto
         redhat.java
         rust-lang.rust-analyzer
         streetsidesoftware.code-spell-checker
