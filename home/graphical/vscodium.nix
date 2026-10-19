@@ -17,7 +17,6 @@
         justusadam.language-haskell
         mkhl.direnv
         myriad-dreamin.tinymist
-        ocamllabs.ocaml-platform
         piousdeer.adwaita-theme
         quarto.quarto
         redhat.java
