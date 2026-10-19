@@ -13,6 +13,7 @@
         haskell.haskell
         james-yu.latex-workshop
         jnoortheen.nix-ide
+        julialang.language-julia
         justusadam.language-haskell
         mkhl.direnv
         myriad-dreamin.tinymist
@@ -59,6 +60,10 @@
         "[nix]" = {
           "editor.defaultFormatter" = "jnoortheen.nix-ide";
         };
+
+        "terminal.integrated.commandsToSkipShell" = [
+          "language-julia.interrupt"
+        ];
 
         "latex-workshop.format.fixMath.enabled" = true;
         "latex-workshop.latex.recipes" = [
