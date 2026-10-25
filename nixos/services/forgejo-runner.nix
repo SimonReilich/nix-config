@@ -27,7 +27,7 @@ in
 
       virtualisation.docker.enable = true;
 
-      services.gitea-actions-runner = {
+      services.forgejo-runner = {
         package = pkgs.forgejo-runner;
         instances.default = {
           enable = true;
