@@ -51,7 +51,6 @@
     delineate
     eloquent
     gnome-network-displays
-    morphosis
     emblem
     icon-library
 
