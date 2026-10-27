@@ -10,6 +10,9 @@
 
   programs.obsidian = {
     enable = true;
+    package = (pkgs.obsidian.override {
+      electron = pkgs.electron_42;
+    });
 
     defaultSettings = {
       app = {
@@ -196,31 +199,6 @@
               }
 
               {
-                "folder" = "Studium/Bachelor Informatik/Analysis für Informatik";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/AnaInfo Vorlage.md";
-              }
-
-              {
-                "folder" = "Studium/Bachelor Informatik/Automatentheorie";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/AutoTheo Vorlage.md";
-              }
-
-              {
-                "folder" = "Studium/Bachelor Informatik/Diskrete Strukturen";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/DS Vorlage.md";
-              }
-
-              {
-                "folder" = "Studium/Bachelor Informatik/Diskrete Wahrscheinlichkeitstheorie";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/DWT Vorlage.md";
-              }
-
-              {
-                "folder" = "Studium/Bachelor Informatik/Einführung in die Informatik";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/EidI Vorlage.md";
-              }
-
-              {
                 "folder" = "Studium/Bachelor Informatik/Einführung in die Informatik und Programmierung";
                 "template" = "Vorlagen/Studium/Bachelor Informatik/EidIP Vorlage.md";
               }
@@ -266,11 +244,6 @@
               }
 
               {
-                "folder" = "Studium/Bachelor Informatik/Grundlagenpraktikum Programmierung";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/PGdP Vorlage.md";
-              }
-
-              {
                 "folder" = "Studium/Bachelor Informatik/Grundlagenpraktikum Rechnerarchitektur";
                 "template" = "Vorlagen/Studium/Bachelor Informatik/GRA Vorlage.md";
               }
@@ -286,18 +259,8 @@
               }
 
               {
-                "folder" = "Studium/Bachelor Informatik/Lineare Algebra für Informatik";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/LAInfo Vorlage.md";
-              }
-
-              {
                 "folder" = "Studium/Bachelor Informatik/Logik";
                 "template" = "Vorlagen/Studium/Bachelor Informatik/Logik Vorlage.md";
-              }
-
-              {
-                "folder" = "Studium/Bachelor Informatik/Numerisches Programmieren";
-                "template" = "Vorlagen/Studium/Bachelor Informatik/NumProg Vorlage.md";
               }
 
               {
