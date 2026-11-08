@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793491409,
-        "narHash": "sha256-8p1/TxCwmA0GdeOxlPKE1FQuuBTOBHv1d4tO0euoY3A=",
+        "lastModified": 1794096269,
+        "narHash": "sha256-JzFvtSH0LU+IruYRzzjA77qcgf0x7QyWaL15SkJQP/k=",
         "ref": "refs/heads/main",
-        "rev": "0bf3091fc19bf70c9b3338046c4d387ab8028377",
-        "revCount": 43,
+        "rev": "55dd7291fb2e25ca1fb253195b07072cc1e7307f",
+        "revCount": 44,
         "type": "git",
         "url": "https://codeberg.org/SimonReilich/automata-suite"
       },
@@ -143,11 +143,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1793505757,
-        "narHash": "sha256-QFDvayCpJoQzg1k67lmjeKJyIIyRA+Ecvl5oyGx5xLw=",
+        "lastModified": 1794110558,
+        "narHash": "sha256-rFaS/p7g4SWsK4n7pD006HE4vDg7tU83OZ1Vkf4fRjM=",
         "ref": "refs/heads/master",
-        "rev": "8172232b66c54682a026c02347543a159e86e811",
-        "revCount": 5023,
+        "rev": "c2939c05dfc5c3854f2086fbbf9ecba6c310f92c",
+        "revCount": 5036,
         "type": "git",
         "url": "https://gitlab.com/rycee/nur-expressions"
       },
@@ -268,11 +268,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793193205,
-        "narHash": "sha256-X6xa6sGA7RnJQuZGbFMC+K+KToWAlBDCCjJXfTwEPsw=",
+        "lastModified": 1793979366,
+        "narHash": "sha256-7OoWDsYO9teiPxl0QdlS5lYE20Pue8/5mpscSL32FUA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "095fef2f265c3c0da4fe315efba8f8a04495ab34",
+        "rev": "2c0c1f01521469cf0271180c453c79782d53c2f6",
         "type": "github"
       },
       "original": {
@@ -343,11 +343,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1793355509,
-        "narHash": "sha256-/Zs18x+IW4LuVH0rKxra0WPRgsk0DQsi0Bwkf8sOC5c=",
+        "lastModified": 1794051415,
+        "narHash": "sha256-mJok3uMK0awq2MPKdSnvTxm3UD89KD3LclQzASgtY1s=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "04c6b94fa104bc23650983a4513aea196794d321",
+        "rev": "1a8ff4f57ffe1f732beaa1db842247a381ea471d",
         "type": "github"
       },
       "original": {
@@ -388,11 +388,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1793341285,
-        "narHash": "sha256-Y1CiZ4SoBUjLQyQM/pY+rS2dXD3CHLPstF0lmOc73D4=",
+        "lastModified": 1793876309,
+        "narHash": "sha256-Wojg9lIH/hDH91iDVH2/EPw8oDSpxjxhXONbU1yf4Zg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1c89083e451e891152365b799595cf7790a43325",
+        "rev": "f9a75f41be3a74eab55d3a7679d34ad6cc0da977",
         "type": "github"
       },
       "original": {
@@ -434,11 +434,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793497751,
-        "narHash": "sha256-3l34oAcZfxL/l6ELfZyJ1VuaBmWMbIt5T/PLLGKeeaw=",
+        "lastModified": 1794103321,
+        "narHash": "sha256-EWxKIuAc/FIzxo+v2HCsS5AlYU5I0n0YMvCJWmoPhQ0=",
         "owner": "SimonReilich",
         "repo": "Obsidian-Plugin-Flake",
-        "rev": "35da02f5685d83a2fa4f353693b5e9fe5c4a3347",
+        "rev": "27b74d6089ef839e96b00ae3b9f1e000c8b3cdb3",
         "type": "github"
       },
       "original": {
@@ -454,11 +454,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793498704,
-        "narHash": "sha256-RMRtIq/b2Ln1Ix9Qdzl5+jxO/6Kx/nKOvZIpOAeHtX8=",
+        "lastModified": 1794104209,
+        "narHash": "sha256-/H1tOuucPcwmSwix48OtPVyQ2hpPt1O1ZeehGrHi7WU=",
         "owner": "simonreilich",
         "repo": "pandoralauncher-flake-wrapper",
-        "rev": "a7c2ac5409f446a6d8b2406cc34896e15545a015",
+        "rev": "915f88ee0ae7a3e7a22f2b4c819851a6e0eb14ce",
         "type": "github"
       },
       "original": {
@@ -474,11 +474,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793499045,
-        "narHash": "sha256-rC8hjj4hbsiBJqjwftp3pC+Zo9tHMaPkktApkAzFE7Y=",
+        "lastModified": 1794104180,
+        "narHash": "sha256-4UBWHQxCCPQQidkOU5pZdoeU/hGm354J+U92bCV87Ss=",
         "owner": "SimonReilich",
         "repo": "PopProtoSim-Neo",
-        "rev": "c227938321f16873eccde2588f04a0cc22ceb1c0",
+        "rev": "15badfff30146ef3d93db8d8832ec536605c686c",
         "type": "github"
       },
       "original": {
@@ -557,11 +557,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793052255,
-        "narHash": "sha256-Y/JIHTnMlOabDfyaSBubWGLDIVGihLEUuoMhFvQKaDo=",
+        "lastModified": 1793995029,
+        "narHash": "sha256-ZlE4BtMjWhfC6rFXLO9Qimn36Ene1INqCgKDDvazjhc=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "60182817ee048ac94b4c68ea76d5ef2e8aac730d",
+        "rev": "89a234ce2daf6e568a7d4b4fe250afdd23d84e20",
         "type": "github"
       },
       "original": {
@@ -725,11 +725,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793498088,
-        "narHash": "sha256-1MkvkLk4WEJkPrKvCZa3wapvXmdmNAgjh7Ap97GUqVQ=",
+        "lastModified": 1794113319,
+        "narHash": "sha256-zQgtR/G5j0eZayjrb6fpBVmy1fkOGlCHyLxW4Tboy2M=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "536b03dea1ab7460afd44565e81f0a72c371c70f",
+        "rev": "5f45f55b9f6f2de78504a95b372e13951793be3a",
         "type": "github"
       },
       "original": {
