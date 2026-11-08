@@ -51,5 +51,9 @@ in
         "flakes"
       ];
     };
+
+    nixpkgs.config.permittedInsecurePackages = [
+      "electron-42.11.18"
+    ];
   };
 }
