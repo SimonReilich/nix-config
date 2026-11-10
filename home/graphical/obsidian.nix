@@ -159,11 +159,6 @@
               }
 
               {
-                "folder" = "Oberstufe/Informatik";
-                "template" = "Vorlagen/Oberstufe/Informatik Vorlage.md";
-              }
-
-              {
                 "folder" = "Oberstufe/Literatur";
                 "template" = "Vorlagen/Oberstufe/Literatur Vorlage.md";
               }

@@ -53,6 +53,7 @@ in
     };
 
     nixpkgs.config.permittedInsecurePackages = [
+      "firefox-esr-140-bin-unwrapped-140.17.0esr"
       "electron-42.11.18"
     ];
   };

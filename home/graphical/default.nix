@@ -10,7 +10,7 @@
 
   home.packages = with pkgs; [
     # Editors and Viewers
-    onlyoffice-desktopeditors
+    euro-office-desktopeditors
     switcheroo
     video-trimmer
     rnote
@@ -19,12 +19,13 @@
     # Info & Entertainment
     spotify
     wike
-    # zotero
+    zotero
     nucleus
 
     # Communication
     discord
     signal-desktop
+    fractal
     zulip
 
     # Creative
@@ -51,6 +52,7 @@
     delineate
     eloquent
     gnome-network-displays
+    morphosis
     emblem
     icon-library
 
