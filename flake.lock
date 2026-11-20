@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "automata-suite": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1794701034,
-        "narHash": "sha256-0x5Euj8PHRRcFjF+xOvhDOAvR/aJnmKlCqetDaYj+GA=",
-        "ref": "refs/heads/main",
-        "rev": "7c959a669b184b5e63e330bc5be2701e897f523d",
-        "revCount": 45,
-        "type": "git",
-        "url": "https://codeberg.org/SimonReilich/automata-suite"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://codeberg.org/SimonReilich/automata-suite"
-      }
-    },
     "autosuggestions": {
       "flake": false,
       "locked": {
@@ -320,27 +300,9 @@
         "type": "github"
       }
     },
-    "nix-cavalry": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1783234379,
-        "narHash": "sha256-4l8ZUMYRNKWDSitpDrlOFx8dtvuv9guoHyGV7K7gDM8=",
-        "owner": "hexadecimal233",
-        "repo": "nix-cavalry",
-        "rev": "4cffbd1c993851086b82a7cb1985f37c6079a26d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hexadecimal233",
-        "repo": "nix-cavalry",
-        "type": "github"
-      }
-    },
     "nixos-hardware": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1794597451,
@@ -359,22 +321,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1781074563,
-        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1789546076,
         "narHash": "sha256-vWkSk5bbfTqdtMoSgD9FshACO8JCvXTFi+3cqEp0mH0=",
         "rev": "b1b875982b17dabde9b4a37f3e229e74913e6db3",
@@ -386,7 +332,7 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1794386569,
         "narHash": "sha256-x9sADJvoVG0L6RejZB+/BB4YiGZFBZrfTlhF4uBq1tQ=",
@@ -511,14 +457,12 @@
     },
     "root": {
       "inputs": {
-        "automata-suite": "automata-suite",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "newsreader-font": "newsreader-font",
-        "nix-cavalry": "nix-cavalry",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "obsidian-plugins": "obsidian-plugins",
         "pandora-nix": "pandora-nix",
         "popprotosim-neo": "popprotosim-neo",

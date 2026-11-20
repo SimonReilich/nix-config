@@ -11,10 +11,10 @@
   networking.networkmanager.enable = true;
 
   boot.kernelPatches = [
-    {
-      name = "fix-rust-gen";
-      patch = ./patches/fix-rust-gen.patch;
-    }
+    # {
+    #   name = "fix-rust-gen";
+    #   patch = ./patches/fix-rust-gen.patch;
+    # }
   ];
   
   boot.kernelParams = [

@@ -63,13 +63,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    automata-suite = {
-      url = "git+https://codeberg.org/SimonReilich/automata-suite";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nix-cavalry.url = "github:hexadecimal233/nix-cavalry";
-
     newsreader-font = {
       url = "github:productiontype/Newsreader";
       flake = false;
