@@ -23,7 +23,6 @@ in
       stylix.polarity = "dark";
 
       stylix.targets.qt.platform = lib.mkForce "qtct";
-      stylix.targets.wayprompt.enable = false;
 
       stylix.image = ./wallpaper.png;
 
