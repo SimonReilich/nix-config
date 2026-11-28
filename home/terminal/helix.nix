@@ -37,6 +37,7 @@ in
       html = mkLanguageOption "html" "HTML";
       javascript = mkLanguageOption "javascript" "JavaScript";
       json = mkLanguageOption "json" "JSON";
+      julia = mkLanguageOption "julia" "Julia";
       latex = mkLanguageOption "latex" "LaTeX (texlab)";
       markdown = mkLanguageOption "markdown" "Markdown";
       nix = mkLanguageOption "nix" "Nix";
@@ -322,6 +323,22 @@ in
             }
           ];
         };
+      };
+    })
+
+    # Julia
+    (mkIf cfg.languages.julia {
+      programs.helix = {
+        extraPackages = [
+          (pkgs.julia-bin.withPackages [ "LanguageServer" ])
+        ];
+        languages.language = [
+          {
+            name = "julia";
+            language-servers = [ "julia" ];
+            auto-format = true;
+          }
+        ];
       };
     })
 

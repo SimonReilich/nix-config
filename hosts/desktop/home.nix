@@ -24,6 +24,7 @@
     enable = lib.mkDefault true;
     languages = {
       json = true;
+      julia = true;
       latex = true;
       markdown = true;
       nix = true;
